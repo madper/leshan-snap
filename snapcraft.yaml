@@ -1,0 +1,16 @@
+name: leshan-snap
+version: 1.0-1
+architectures: [ amd64 ]
+summary: the git version of AwaLWM2M
+description: See $summary
+grade: devel
+confinement: devmode
+
+apps:
+  awa-clientd:
+    plugs: [network, network-bind]
+    
+parts:
+  leshan:
+    plugin: maven
+    source: https://github.com/eclipse/leshan.git
